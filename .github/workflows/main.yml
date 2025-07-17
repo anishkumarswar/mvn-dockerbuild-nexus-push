@@ -68,7 +68,7 @@ jobs:
       - name: Update deployment.yml with new image
         run: |
           ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}
-          IMAGE_URL=741448935198.dkr.ecr.ap-south-1.amazonaws.com/5febrepo:${{ github.sha }}
+          IMAGE_URL=051266452449.dkr.ecr.us-east-1.amazonaws.com/ecr/ecrrepo:${{ github.sha }}
           sed -i "s|<IMAGE_URL>|$IMAGE_URL|g" regapp-deploy.yml
 
       - name: Apply Kubernetes manifests
