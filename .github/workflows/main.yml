@@ -73,5 +73,5 @@ jobs:
 
       - name: Apply Kubernetes manifests
         run: |
-          kubectl apply -f regapp-deploy.yml --validate=false
-          kubectl apply -f regapp-service.yml --validate=false
+          kubectl apply -f argocd/Deployment.yml --validate=false
+        
