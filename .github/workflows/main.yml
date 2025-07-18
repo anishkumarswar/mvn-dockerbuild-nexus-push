@@ -69,7 +69,7 @@ jobs:
         run: |
           ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}
           IMAGE_URL=051266452449.dkr.ecr.us-east-1.amazonaws.com/ecr/ecrrepo:${{ github.sha }}
-          sed -i "s|<IMAGE_URL>|$IMAGE_URL|g" deployment.yml
+          sed -i "s|<IMAGE_URL>|$IMAGE_URL|g" argocd/Deployment.yml
 
       - name: Apply Kubernetes manifests
         run: |
